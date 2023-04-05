@@ -1,57 +1,34 @@
-#include <iostream>
-#include<vector>
-#include<string>
-
-using namespace std;
-
-
-typedef struct {
-    string name; 
-    unsigned int score; 
-} student;
-
-
-void set_score(student* s, int k, int x) {
-    unsigned int mask = x << (6 * k);
-    s->score |= mask;
-}
-
-
-int get_score(student* s, int k) {
-    const unsigned int mask = 63;
-    unsigned int temp = s->score >> (6 * k);
-    return temp & mask;
-}
-
-
-void print_student(student* s) {
-    cout << "姓名：" << s->name << endl;
-    cout<< "语文："<< get_score(s, 0)<<endl;
-    cout<< "数学："<<get_score(s, 1) << endl;
-    cout<< "英语："<<get_score(s, 2) << endl;
-    cout << "物理：" << get_score(s, 3) << endl;
-    cout << "化学：" << get_score(s, 4) << endl;
-}
-
-int main() {
-    int n;
-    cout << "请输入学生人数:" << endl;
-    cin >> n;
-    vector<student> students(n);
-    for (int i = 0; i < n; i++) {
-        cout << "请输入第" << i + 1 << "个学生的姓名：" << endl;
-        cin >> students[i].name;
-        students[i].score = 0; 
-        for (int j = 0; j < 5; j++) {
-            cout << "请输入第" << i + 1 << "个学生的第" << j + 1 << "门课的成绩：" << endl;
-            int x;
-            cin >> x;
-            set_score(&students[i], j, x); 
-        }
-    }
-    for (int i = 0; i < n; i++) {
-        print_student(&students[i]); 
-        cout << endl;
-    }
-    return 0;
-}
+//#include<iostream>
+//#include<vector>
+//
+//using namespace std;
+//
+//
+// 用于判断i是否是水仙花数，若是则返回1，否则返回0
+//int resNum(int i) {
+//	int n = i;
+//	int ans = 0;
+//	int tmp[3];
+//	int j = 0;
+//	while (i) {
+//		tmp[j] = i % 10;
+//		i /= 10;
+//		j++;
+//	}
+//	if (tmp[0] * tmp[0] * tmp[0] + tmp[1] * tmp[1] * tmp[1] + tmp[2] * tmp[2] * tmp[2] == n) {
+//		return 1;
+//	}
+//	else {
+//		return 0;
+//	}
+//}
+//
+//
+//int main() {
+//	for (int i = 100; i <= 999; i++) {
+//		if (resNum(i)) {
+//			cout << i << endl;
+//		}
+//	}
+//	return 0;
+//}
