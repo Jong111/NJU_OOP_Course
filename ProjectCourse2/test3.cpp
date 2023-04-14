@@ -1,21 +1,24 @@
 #include<iostream>
-#include<vector>
 
 using namespace std;
 
-int main() {
-	double aQuarterPi = 0;
-	int base = 0;
-	while (1.0/(2*base+1)>=1e-8) {
-		if (base % 2) {
-			aQuarterPi += -1 * (1.0 / (2 * base + 1));
-		}
-		else {
-			aQuarterPi += 1.0 / (2 * base + 1);
-		}
-		base++;
+int f(int n) {
+	if (n == 1) {
+		return 1;
 	}
-	cout << aQuarterPi * 4;
+	if (n == 2) {
+		return 1;
+	}
+	if (n % 2) {
+		return f(n - 1) + f(n - 2);
+	}
+	else {
+		return f(n - 1) + f(n - 2) + f(n - 3);
+	}
+}
+
+int main() {
+	cout << f(8) << endl;
 	return 0;
 }
 
