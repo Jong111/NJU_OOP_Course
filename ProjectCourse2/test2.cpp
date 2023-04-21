@@ -1,19 +1,23 @@
 //#include<iostream>
-//
 //using namespace std;
+//class A {
+//private:
+//    A() {} 
+//    static A* aa;
+//public:
+//    static A* getinstance() { 
+//        if (aa == nullptr) { 
+//            aa = new A(); 
+//        }
+//        return aa; 
+//    }
+//};
 //
-//int f(int n) {
-//	if (n == 0) {
-//		return 1;
-//	}
-//	if (n == 1) {
-//		return 1;
-//	}
-//	return f(n - 1) + f(n - 2);
-//}
+//A* A::aa = nullptr;
 //
 //int main() {
-//	cout << f(10) << endl;
-//	return 0;
+//    A* a1 = A::getinstance(); 
+//    A* a2 = A::getinstance(); 
+//    cout << (a1 == a2) << endl; 
+//    return 0;
 //}
-//
