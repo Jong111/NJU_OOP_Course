@@ -1,21 +1,34 @@
 //#include<iostream>
-//#include <cassert>
+//#include<string>
+//#include<fstream>
+//#include<vector>
 //
 //using namespace std;
 //
-//int ack(int m, int n) {
-//	assert(m >= 0 && n >= 0);
-//	if (m == 0) {
-//		return n + 1;
-//	}
-//	if (n == 0) {
-//		return ack(m - 1, 1);
-//	}
-//	return ack(m - 1, ack(m, n - 1));
-//}
-//
-//
 //int main() {
-//	cout << ack(2, 2) << endl;
-// return 0;
+//	ifstream f;
+//	f.open("d:\\srcFile.txt", ios::in);
+//	if (!f) {
+//		cout << "Error: Failed to open the file" << endl;
+//		exit(-1);
+//	}
+//	vector<string> strs;
+//	while (!f.eof()) {
+//		string str;
+//		getline(f, str);
+//		strs.push_back(str);
+//	}
+//
+//	ofstream of;
+//	of.open("d:\\destFile.txt", ios::out);
+//	if (!of) {
+//		cout << "Error: Failed to open the file" << endl;
+//		exit(-1);
+//	}
+//	// int tt = 0;
+//	for (int i = 0; i < strs.size(); i++) {
+//		of << strs[i] << endl;
+//	}
+//	of.close();
+//	return 0;
 //}
