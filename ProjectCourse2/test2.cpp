@@ -49,6 +49,6 @@
 //int main() {
 //	char c;
 //	cin >> c;
-//	counter(c, "d:\\srcFile.txt");
+//	counter(c, "srcFile.txt");
 //	return 0;
 //}

@@ -143,6 +143,12 @@
     <ClCompile Include="test2.cpp" />
     <ClCompile Include="test3.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="destFile.txt" />
+    <Text Include="destTedFile.txt" />
+    <Text Include="srcFile.txt" />
+    <Text Include="ted.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
