@@ -92,8 +92,8 @@
 //		r2++;
 //	}
 //	// cout << "最多连续上涨天数：" << maxUp << " " << "最多连续下跌天数：" << maxDown << endl;
-//	cout << "最多连续上涨区间为从第" << dates[lres1] << "天到第" << dates[rres1] << "天" << endl;
-//	cout << "最多连续下跌区间为从第" << dates[lres2] << "天到第" << dates[rres2] << "天" << endl;
+//	cout << "最多连续上涨区间为从" << dates[lres1] << "到" << dates[rres1] << endl;
+//	cout << "最多连续下跌区间为从" << dates[lres2] << "到" << dates[rres2] << endl;
 //}
 //
 //int main() {
