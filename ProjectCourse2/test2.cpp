@@ -1,19 +1,13 @@
 //#include<iostream>
+//#include<algorithm>
+//#include<string>
 //
 //using namespace std;
 //
-//int f(int n) {
-//	if (n == 0) {
-//		return 1;
-//	}
-//	if (n == 1) {
-//		return 1;
-//	}
-//	return f(n - 1) + f(n - 2);
-//}
-//
 //int main() {
-//	cout << f(10) << endl;
+//	string str;
+//	cin >> str;
+//	reverse(str.begin(), str.end());
+//	cout << str << endl;
 //	return 0;
 //}
-//
