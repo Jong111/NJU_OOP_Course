@@ -1,24 +1,35 @@
-#include<iostream>
-
-using namespace std;
-
-int f(int n) {
-	if (n == 1) {
-		return 1;
-	}
-	if (n == 2) {
-		return 1;
-	}
-	if (n % 2) {
-		return f(n - 1) + f(n - 2);
-	}
-	else {
-		return f(n - 1) + f(n - 2) + f(n - 3);
-	}
-}
-
-int main() {
-	cout << f(8) << endl;
-	return 0;
-}
-
+//#include<iostream>
+//#include<vector>
+//
+//using namespace std;
+//
+//int main() {
+//	int n;
+//	cin >> n;
+//	if (n <= 3) {
+//		if (n == 0) {
+//			cout << 1;
+//		}
+//		else if (n == 1) {
+//			cout << 1;
+//		}
+//		else if (n == 2) {
+//			cout << 2;
+//		}
+//		else if (n == 3) {
+//			cout << 4;
+//		}
+//	}
+//	else {
+//		vector<int> dp(n + 1);
+//		dp[0] = 1;
+//		dp[1] = 1;
+//		dp[2] = 2;
+//		dp[3] = 3;
+//		for (int i = 4; i <= n; i++) {
+//			dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];
+//		}
+//		cout << dp[n];
+//	}
+//	return 0;
+//}
