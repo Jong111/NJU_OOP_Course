@@ -25,4 +25,17 @@
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="inputFile.txt" />
+    <Text Include="outputFile1.txt" />
+    <Text Include="outputFile2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sales_data.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sales_item.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
