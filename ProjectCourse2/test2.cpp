@@ -1,19 +1,54 @@
-//#include<iostream>
-//
-//using namespace std;
-//
-//int f(int n) {
-//	if (n == 0) {
-//		return 1;
-//	}
-//	if (n == 1) {
-//		return 1;
-//	}
-//	return f(n - 1) + f(n - 2);
-//}
-//
-//int main() {
-//	cout << f(10) << endl;
-//	return 0;
-//}
-//
+#include <iostream>
+#include <memory>
+#include <string>
+
+using namespace std;
+
+struct connection
+{
+    string ip;
+    int port;
+    connection(string i, int p) : ip(i), port(p) {}
+};
+
+struct destination
+{
+    string ip;
+    int port;
+    destination(string i, int p) : ip(i), port(p) {}
+};
+
+connection connect(destination* pDest)
+{
+    shared_ptr<connection>
+        pConn(new connection(pDest->ip, pDest->port));
+    cout << "creating connection("
+        << pConn.use_count() << ")" << endl;
+    return *pConn;
+}
+
+void disconnect(connection pConn)
+{
+    cout << "connection close(" << pConn.ip << ":"
+        << pConn.port << ")" << endl;
+}
+
+void end_connection(connection* pConn)
+{
+    disconnect(*pConn);
+}
+
+void f(destination& d)
+{
+    connection conn = connect(&d);
+    shared_ptr<connection> p(&conn, end_connection);
+    cout << "connecting now(" << p.use_count() << ")" << endl;
+}
+
+int main()
+{
+    destination dest("220.181.111.111", 10086);
+    f(dest);
+
+    return 0;
+}

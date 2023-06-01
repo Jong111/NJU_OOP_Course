@@ -1,21 +1,35 @@
-//#include<iostream>
-//#include <cassert>
+//#include <iostream>
+//#include <vector>
+//#include <memory>
 //
 //using namespace std;
 //
-//int ack(int m, int n) {
-//	assert(m >= 0 && n >= 0);
-//	if (m == 0) {
-//		return n + 1;
-//	}
-//	if (n == 0) {
-//		return ack(m - 1, 1);
-//	}
-//	return ack(m - 1, ack(m, n - 1));
+//shared_ptr<vector<int>> alloc_vector()
+//{
+//    return make_shared<vector<int>>();
 //}
 //
+//void assign_vector(shared_ptr<vector<int>> p)
+//{
+//    int i;
+//    while (cin >> i)
+//    {
+//        p->push_back(i);
+//    }
+//}
 //
-//int main() {
-//	cout << ack(2, 2) << endl;
-// return 0;
+//void print_vector(shared_ptr<vector<int>> p)
+//{
+//    for (auto i : *p)
+//    {
+//        cout << i << endl;
+//    }
+//}
+//
+//int main()
+//{
+//    auto p = alloc_vector();
+//    assign_vector(p);
+//    print_vector(p);
+//    return 0;
 //}
